@@ -9,6 +9,7 @@ public class Main {
         printEvenNumbers(arr);
         countEvenNumbers(arr);
         countOddNumbers(arr);
+        printArrElemSum(arr);
 
     }
 
@@ -20,7 +21,7 @@ public class Main {
                 evenNum++;
             }
         }
-        System.out.print("\n Количество четных элементов массива arr: " + evenNum );
+        System.out.print("\n Количество четных элементов массива arr: " + evenNum);
     }
 
     public static void countOddNumbers(int[] arr) {
@@ -47,6 +48,20 @@ public class Main {
         for (int x = 0; x < arr.length; x++)
             if (arr[x] % 2 != 0)
                 System.out.println(arr[x]);
+    }
+    public  static void printPrimeNumbers(int[] arr){
+
+    }
+    public static void printArrElemSum(int[] arr) {
+        int sum = 0;
+
+        // Прибавляем к переменной sum каждый элемент массива.
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+
+        // Вывод результата на экран.
+        System.out.println("\n Сумма элементов массива arr: " + sum);
     }
 }
 
