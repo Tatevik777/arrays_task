@@ -4,8 +4,6 @@ public class Main {
     public static void main(String[] args) {
 
         int[] arr = new int[]{5, 13, 2, 1, 7, 11, 12, 4, 1, 10};
-
-
         printOddNumbers(arr);
         printEvenNumbers(arr);
         countEvenNumbers(arr);
@@ -16,11 +14,10 @@ public class Main {
         evenIndexNumSum(arr);
         printEvenIndexNumbers(arr);
         printOddIndexNumbers(arr);
-        oddIndexNumSum(arr);
+        oddEvenNumIndxSubstract(arr);
     }
 
     public static void countEvenNumbers(int[] arr) {
-
         int evenNum = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 0) {
@@ -31,7 +28,6 @@ public class Main {
     }
 
     public static void countOddNumbers(int[] arr) {
-
         int oddNum = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 != 0) {
@@ -87,46 +83,58 @@ public class Main {
         System.out.println("\n Количество простых чисел массива arr: " + counter);
         return counter;
     }
-    public static int oddIndexNumSum(int[] arr){
-   int sumOdd = 0;
-        for(int i = 0; i < arr.length; i++){  if(i%2 != 0){
-            sumOdd += arr[i];
-        }
 
-
+    public static int oddIndexNumSum(int[] arr) {
+        int sumOdd = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 != 0) {
+                sumOdd += arr[i];
+            }
         }
         System.out.println("\n Сумма элементов с нечётным индексом массива arr: " + sumOdd);
         return 0;
     }
-    public static int evenIndexNumSum(int[] arr){
+
+    public static int evenIndexNumSum(int[] arr) {
         int evenSum = 0;
-        for(int i = 0; i < arr.length; i++){
-            if(i%2 == 0) {
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
                 evenSum += arr[i];
             }
         }
         System.out.println("\n Сумма элементов с чётным индексом массива arr: " + evenSum);
         return 0;
     }
-    public static void printEvenIndexNumbers(int[] arr){
+
+    public static void printEvenIndexNumbers(int[] arr) {
         System.out.print("\nЭлементы массива arr с чётным индексом: ");
         for (int i = 0; i < arr.length; i++) {
-            if(i%2 == 0){
+            if (i % 2 == 0) {
                 System.out.print("\nиндекс " + i + " = " + arr[i] + ", ");
             }
         }
     }
-    public static void printOddIndexNumbers(int[] arr){
+
+    public static void printOddIndexNumbers(int[] arr) {
         System.out.print("\nЭлементы массива arr с нечётным индексом: ");
         for (int i = 0; i < arr.length; i++) {
-            if(i%2 != 0){
+            if (i % 2 != 0) {
                 System.out.print("\nиндекс " + i + " = " + arr[i] + ", ");
             }
         }
     }
-    public static void oddEvenNumIndxSubstract(int[] arr){
 
-        System.out.println(" Разность суммы чисел с четными и нечетными индексами");
+    public static void oddEvenNumIndxSubstract(int[] arr) {
+        int evenSum = 0;
+        int sumOdd = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
+                evenSum += arr[i];
+            } else {
+                sumOdd += arr[i];
+            }
+        }
+        System.out.println("\n Разность суммы чисел с четными и нечетными индексами" + (evenSum - sumOdd));
     }
 }
 //Дополнительное задание Работа с массивами 1:
