@@ -1,9 +1,11 @@
 package by.tatevik.arrays_task;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
     public static void main(String[] args) {
 
-        int[] arr = new int[]{5, 13, 2, 1, 7, 11, 12, 4, 1, 10};
+        int[] arr = new int[]{5, 13, 2, 1, 7, 11, 12, 4, 5, 10};
         printOddNumbers(arr);
         printEvenNumbers(arr);
         countEvenNumbers(arr);
@@ -15,6 +17,8 @@ public class Main {
         printEvenIndexNumbers(arr);
         printOddIndexNumbers(arr);
         oddEvenNumIndxSubstract(arr);
+        zeroNumCount(arr);
+        sortArrAscending(arr);
     }
 
     public static void countEvenNumbers(int[] arr) {
@@ -136,7 +140,35 @@ public class Main {
         }
         System.out.println("\n Разность суммы чисел с четными и нечетными индексами" + (evenSum - sumOdd));
     }
+
+    public static void zeroNumCount(int[] arr) {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0) {
+                count++;
+            }
+
+        }
+        System.out.println("\n Количество чисел 0 в массиве arr " + count);
+    }
+
+    public static void sortArrAscending(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = i + 1; j < arr.length; j++) {
+            }
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    int t = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = t;
+                }
+            }
+            System.out.println("Массив arr по возрастанию" + arr[i]);
+        }
+    }
 }
+
 //Дополнительное задание Работа с массивами 1:
 
 //у нас есть массив из 10 случайных целых чисел, которые разбросаны в нем в случайном порядке.
