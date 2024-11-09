@@ -19,6 +19,7 @@ public class Main {
         oddEvenNumIndxSubstract(arr);
         zeroNumCount(arr);
         sortArrAscending(arr);
+        sortArrDesscending(arr);
     }
 
     public static void countEvenNumbers(int[] arr) {
@@ -151,8 +152,8 @@ public class Main {
         }
         System.out.println("\n Количество чисел 0 в массиве arr " + count);
     }
-
-    public static void sortArrAscending(int[] arr) {
+    //сортировка массива по возрастанию
+    public static void sortArrDesscending(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
 
             for (int j = i + 1; j < arr.length; j++) {
@@ -164,7 +165,24 @@ public class Main {
                     arr[j] = t;
                 }
             }
-            System.out.println("Массив arr по возрастанию" + arr[i]);
+            System.out.println(arr[i]);
+        }
+    }
+
+    //сортировка массива по убыванию
+    public static void sortArrAscending(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = i + 1; j < arr.length; j++) {
+            }
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    int t = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = t;
+                }
+            }
+            System.out.println(arr[i]);
         }
     }
 }
