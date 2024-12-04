@@ -89,7 +89,7 @@ public class Main {
         return counter;
     }
 
-    public static int oddIndexNumSum(int[] arr) {
+    public static void oddIndexNumSum(int[] arr) {
         int sumOdd = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 != 0) {
@@ -97,10 +97,10 @@ public class Main {
             }
         }
         System.out.println("\n Сумма элементов с нечётным индексом массива arr: " + sumOdd);
-        return 0;
+
     }
 
-    public static int evenIndexNumSum(int[] arr) {
+    public static void evenIndexNumSum(int[] arr) {
         int evenSum = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
@@ -108,7 +108,7 @@ public class Main {
             }
         }
         System.out.println("\n Сумма элементов с чётным индексом массива arr: " + evenSum);
-        return 0;
+
     }
 
     public static void printEvenIndexNumbers(int[] arr) {
@@ -152,12 +152,11 @@ public class Main {
         }
         System.out.println("\n Количество чисел 0 в массиве arr " + count);
     }
+
     //сортировка массива по возрастанию
     public static void sortArrDesscending(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
 
-            for (int j = i + 1; j < arr.length; j++) {
-            }
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] < arr[j]) {
                     int t = arr[i];
@@ -173,8 +172,6 @@ public class Main {
     public static void sortArrAscending(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
 
-            for (int j = i + 1; j < arr.length; j++) {
-            }
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] > arr[j]) {
                     int t = arr[i];
